@@ -1,0 +1,51 @@
+@use '../abstracts';
+
+body {
+  margin: 0;
+  background-color: abstracts.$bg-primary;
+}
+
+section {
+  margin-bottom: abstracts.$spacing-l;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  font-family: abstracts.$ff-primary;
+  text-decoration: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.container {
+  padding-inline: abstracts.$spacing-base;
+
+  @media (min-width: abstracts.$breakpoint-tablet) {
+    padding-inline: abstracts.$spacing-s;
+  }
+
+  @media (min-width: abstracts.$breakpoint-desktop) {
+    padding-inline: 0;
+    width: 90%;
+    max-width: 70em;
+    margin: 0 auto;
+  }
+}

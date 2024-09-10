@@ -1,0 +1,82 @@
+@use '../abstracts';
+
+.nav {
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+  // width: 100%;
+  // z-index: 9999;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: abstracts.$spacing-s;
+
+  &__logo {
+    z-index: 9999;
+  }
+
+  &__btn {
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+    background: none;
+    z-index: 9999;
+
+    @include abstracts.breakpoint(tablet) {
+      display: none;
+    }
+  }
+
+  &__list {
+    z-index: 9000;
+    background-color: abstracts.$bg-secondary;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: abstracts.$spacing-s abstracts.$spacing-base;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+
+    @include abstracts.breakpoint(tablet) {
+      transform: translateX(0%);
+      height: 100%;
+      position: unset;
+      flex-direction: row;
+      background-color: transparent;
+      padding: 0;
+      gap: abstracts.$spacing-base;
+    }
+  }
+
+  &__list-item {
+    padding-block: 1rem;
+    width: 100%;
+  }
+
+  &__link {
+    color: abstracts.$clr-secondary;
+    text-transform: uppercase;
+    font-weight: abstracts.$fw-primary;
+
+    @include abstracts.breakpoint(tablet) {
+      text-transform: capitalize;
+    }
+  }
+
+  &--open {
+    position: fixed;
+
+    .nav__list {
+      transform: translateX(0%);
+    }
+  }
+}

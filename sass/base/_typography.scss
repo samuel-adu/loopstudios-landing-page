@@ -1,0 +1,40 @@
+@use '../abstracts';
+
+.main__heading,
+.section__heading,
+.product__title {
+  font-family: abstracts.$ff-secondary;
+  font-weight: abstracts.$fw-secondary;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.main__heading {
+  font-size: clamp(2.5rem, 4vw + 1rem, 3.5rem);
+  color: abstracts.$clr-secondary;
+}
+
+.section {
+  &__heading {
+    font-size: 2rem;
+    font-size: clamp(2rem, 4vw + 1rem, 2.5rem);
+    color: abstracts.$clr-primary;
+    margin-bottom: abstracts.$spacing-m;
+  }
+
+  &__text {
+    color: abstracts.$clr-tetiary;
+    line-height: 1.6;
+    font-size: 0.9375rem;
+  }
+}
+
+.product__title {
+  font-size: 1.5rem;
+  color: abstracts.$clr-secondary;
+}
+
+small {
+  font-size: 1rem;
+  line-height: 0;
+}

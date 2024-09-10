@@ -1,0 +1,13 @@
+@use '../abstracts';
+
+.card {
+  position: relative;
+  text-align: left;
+
+  &__title {
+    position: absolute;
+    left: abstracts.$spacing-base;
+    bottom: abstracts.$spacing-base;
+    width: 40%;
+  }
+}

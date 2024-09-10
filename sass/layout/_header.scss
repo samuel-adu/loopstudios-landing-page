@@ -1,0 +1,36 @@
+@use '../abstracts';
+
+.header {
+  margin-bottom: abstracts.$spacing-l;
+  background-image: url('/images/mobile/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90svh;
+
+  @include abstracts.breakpoint(tablet) {
+    background-image: url('/images/desktop/image-hero.jpg');
+  }
+
+  .container {
+    position: relative;
+    height: 100%;
+  }
+
+  .hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: abstracts.$spacing-base;
+    border: 2px solid abstracts.$clr-secondary;
+
+    @include abstracts.breakpoint(desktop) {
+      width: 60%;
+      max-width: 650px;
+      padding: abstracts.$spacing-s;
+      top: 50%;
+      left: 0;
+      transform: translate(0%, -35%);
+    }
+  }
+}

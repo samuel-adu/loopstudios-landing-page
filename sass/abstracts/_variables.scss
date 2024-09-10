@@ -1,0 +1,26 @@
+$black: hsl(0, 0%, 0%);
+$gray: hsl(0, 0%, 41%);
+$dark-gray: hsl(0, 0%, 55%);
+$white: hsl(0, 0%, 100%);
+
+$bg-primary: $white;
+$bg-secondary: $black;
+
+$clr-primary: $black;
+$clr-secondary: $white;
+$clr-tetiary: $gray;
+
+$ff-primary: 'Alata', sans-serif;
+$ff-secondary: 'Josefin Sans', sans-serif;
+
+$fw-primary: 400;
+$fw-secondary: 300;
+
+$spacing-l: 10rem;
+$spacing-m: 5rem;
+$spacing-s: 2.5rem;
+$spacing-base: 1.5rem;
+
+$breakpoint-mobile: 640px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;

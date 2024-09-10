@@ -1,0 +1,85 @@
+@use '../abstracts';
+
+.about {
+  margin-bottom: abstracts.$spacing-l;
+  position: relative;
+
+  &__image {
+    @include abstracts.breakpoint(desktop) {
+      width: 65%;
+      bottom: 0;
+      right: 0;
+    }
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    padding-inline: abstracts.$spacing-base;
+    padding-top: abstracts.$spacing-s;
+
+    @include abstracts.breakpoint(desktop) {
+      background-color: abstracts.$bg-primary;
+      text-align: left;
+      padding-block: abstracts.$spacing-m 0;
+      padding-inline: abstracts.$spacing-m;
+      width: 50%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  .section__heading {
+    margin-bottom: abstracts.$spacing-s;
+  }
+}
+
+.product {
+  text-align: center;
+  position: relative;
+
+  @include abstracts.breakpoint(tablet) {
+    .section__heading {
+      text-align: left;
+    }
+
+    .btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: abstracts.$spacing-base;
+    margin-bottom: abstracts.$spacing-s;
+
+    @include abstracts.breakpoint(tablet) {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+
+  &__card {
+    position: relative;
+    text-align: left;
+  }
+
+  &__image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__title {
+    position: absolute;
+    left: abstracts.$spacing-base;
+    bottom: abstracts.$spacing-base;
+    width: 10ch;
+  }
+}
