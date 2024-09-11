@@ -49,6 +49,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.samueladu.dev)
+- Website - [samueladu.dev](https://www.samueladu.dev)
 - Frontend Mentor - [@samuel-adu](https://www.frontendmentor.io/profile/samuel-adu)
 - LinkedIn - [@thesamueladu](https://www.linkedin.com/in/thesamueladu/)
