@@ -135,11 +135,12 @@ a {
   background-image: url("/images/mobile/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 90svh;
+  height: 100svh;
 }
 @media (min-width: 768px) {
   .header {
     background-image: url("/images/desktop/image-hero.jpg");
+    height: 80svh;
   }
 }
 .header .container {
