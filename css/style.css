@@ -140,7 +140,7 @@ a {
 @media (min-width: 768px) {
   .header {
     background-image: url("/images/desktop/image-hero.jpg");
-    height: 70svh;
+    height: 75svh;
   }
 }
 .header .container {
