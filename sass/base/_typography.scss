@@ -34,7 +34,16 @@
   color: abstracts.$clr-secondary;
 }
 
+p {
+  font-size: clamp(0.9375rem, 4vw + 1rem, 1rem);
+}
+
 small {
   font-size: 1rem;
   line-height: 0;
+}
+
+a {
+  font-family: abstracts.$ff-primary;
+  text-decoration: none;
 }

@@ -6,7 +6,6 @@ footer {
 
 .footer {
   padding-block: abstracts.$spacing-m;
-  text-align: center;
 
   @include abstracts.breakpoint(tablet) {
     padding-block: abstracts.$spacing-s;
@@ -15,6 +14,11 @@ footer {
   }
 
   &__nav {
+    text-align: center;
+
+    @include abstracts.breakpoint(tablet) {
+      text-align: left;
+    }
     &-logo {
       margin-bottom: abstracts.$spacing-s;
       margin-inline: auto;
@@ -43,6 +47,11 @@ footer {
   }
 
   &__social {
+    text-align: center;
+    @include abstracts.breakpoint(tablet) {
+      text-align: right;
+    }
+
     &-list {
       display: flex;
       align-items: center;

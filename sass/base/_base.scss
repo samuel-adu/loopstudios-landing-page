@@ -1,5 +1,9 @@
 @use '../abstracts';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: abstracts.$bg-primary;
@@ -7,20 +11,16 @@ body {
 
 section {
   margin-bottom: abstracts.$spacing-l;
+  scroll-margin: abstracts.$spacing-m;
 }
 
 img {
   max-width: 100%;
-  display: block;
+  // display: block;
 }
 
 ul {
   list-style: none;
-}
-
-a {
-  font-family: abstracts.$ff-primary;
-  text-decoration: none;
 }
 
 .sr-only {
@@ -33,6 +33,36 @@ a {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+.footer__social-link,
+.footer__nav-link,
+.nav__link {
+  position: relative;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.footer__social-link::after,
+.footer__nav-link::after,
+.nav__link::after {
+  content: '';
+  width: 1.5rem;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.footer__social-link:hover::after,
+.footer__social-link:focus::after,
+.footer__nav-link:hover::after,
+.footer__nav-link:focus::after,
+.nav__link:hover::after,
+.nav__link:focus::after {
+  opacity: 1;
 }
 
 .container {
