@@ -9,7 +9,7 @@
 
   @include abstracts.breakpoint(tablet) {
     background-image: url('/images/desktop/image-hero.jpg');
-    height: 80svh;
+    height: 70svh;
   }
 
   .container {
